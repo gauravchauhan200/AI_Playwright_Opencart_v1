@@ -20,6 +20,14 @@ export class RandomDataUtil {
         return faker.internet.email();
     }
 
+    /**
+     * Generates a guaranteed-unique e-mail address suitable for new registrations
+     * @returns A unique e-mail address
+     */
+    static getUniqueEmail(): string {
+        return `auto.${Date.now()}.${faker.string.alphanumeric(6)}@example.com`;
+    }
+
     static getPhoneNumber(): string {
         return faker.phone.number();
     }
