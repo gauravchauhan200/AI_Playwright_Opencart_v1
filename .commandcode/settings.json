@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(npx playwright test --grep \"@e2e\" --project=chromium --list 2>&1)",
+      "powershell"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
