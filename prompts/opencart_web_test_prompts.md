@@ -3,6 +3,7 @@
 **Application URL:** `http://localhost/opencart/upload/`
 
 Implement these scenarios following the framework conventions defined in `playwright-mcp-context.md`.
+using playwright CLI
 
 ---
 
@@ -158,8 +159,6 @@ Covers the complete customer shopping journey.
 Registration, re-login, product search, cart addition, and cart validation all succeed in one continuous customer journey.
 
 ---
-
-
 
 # 8. Login Flow (Data Driven using External File)
 

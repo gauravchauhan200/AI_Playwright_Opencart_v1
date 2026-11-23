@@ -12,9 +12,9 @@ export async function executeQuery(sql: string, params?: any[]) {
         database: process.env.DB_NAME,
     });
 
-    const result = await connection.execute(sql, params);
-
-    await connection.end();
-
-    return result;
+    try {
+        return await connection.execute(sql, params);
+    } finally {
+        await connection.end();
+    }
 }
