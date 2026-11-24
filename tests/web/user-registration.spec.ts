@@ -17,7 +17,7 @@
 import { test, expect } from '../../fixtures/pageFixtures';
 import { RandomDataUtil } from '../../utils/dataGenerator';
 
-test('User registration flow test @master @sanity @regression @web', async ({ homePage, registerPage, accountSuccessPage, myAccountPage }) => {
+test('User registration flow test @master @sanity @regression @e2e @web' , async ({ homePage, registerPage, accountSuccessPage, myAccountPage }) => {
     const email = RandomDataUtil.getUniqueEmail();
     const password = RandomDataUtil.getPassword(10);
 
