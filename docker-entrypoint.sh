@@ -21,7 +21,7 @@ SUITE="${1:-all}"
 
 case "$SUITE" in
   all)
-    shift 2>/dev/null || true
+    if [ $# -gt 0 ]; then shift; fi
     echo "==> Running ALL tests (args: $@)"
     exec npx playwright test "$@"
     ;;

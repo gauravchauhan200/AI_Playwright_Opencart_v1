@@ -1,8 +1,11 @@
 # =============================================================================
 # Dockerfile — Playwright + TypeScript Automation Framework
 # =============================================================================
-# Base image with Playwright v1.62.0, Node.js, and system dependencies
-FROM mcr.microsoft.com/playwright:v1.62.0-noble
+# Base image with Playwright v1.65.1, Node.js, and system dependencies
+# NOTE: This tag MUST match the @playwright/test version in package-lock.json.
+# Browser builds are pinned per Playwright release (1.65.1 -> chromium 1255),
+# so a mismatched base image causes "Executable doesn't exist" at runtime.
+FROM mcr.microsoft.com/playwright:v1.65.1-noble
 
 # Set working directory
 WORKDIR /app

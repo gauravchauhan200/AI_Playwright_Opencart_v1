@@ -1,0 +1,26 @@
+# =============================================================================
+# .gitattributes — line-ending policy
+# =============================================================================
+# Shell scripts must keep LF endings. With core.autocrlf=true on Windows, git
+# would otherwise check these out as CRLF, and the container fails at startup
+# with "/app/docker-entrypoint.sh: not found" or "$'\r': command not found".
+# =============================================================================
+
+*.sh            text eol=lf
+
+# Dockerfile is parsed by the daemon; keep it predictable too.
+Dockerfile      text eol=lf
+*.yml           text eol=lf
+*.yaml          text eol=lf
+
+# Binary assets must never be converted.
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.ico           binary
+*.zip           binary
+*.webm          binary
+*.pdf           binary
+*.xlsx          binary
